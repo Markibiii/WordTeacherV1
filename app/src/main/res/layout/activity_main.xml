@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="@color/background_dark">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Word Lock Teacher"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/tvVersionInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version 1.0 + Room DB"
+        android:textColor="@color/gray_light"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/card_dark">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Show words on unlock"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+
+                <Switch
+                    android:id="@+id/switchEnableService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_dark"
+                android:layout_marginVertical="16dp"/>
+
+            <Button
+                android:id="@+id/btnPreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preview Word Screen"
+                android:backgroundTint="@color/accent_teal"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnAddWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Custom Word"
+                android:backgroundTint="@color/sanskrit_color"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvCustomCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Custom words added: 0"
+                android:textColor="@color/gray_light"
+                android:textSize="14sp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Every unlock teaches you a new word. Add your own words to expand the dictionary."
+        android:textColor="@color/gray_light"
+        android:layout_marginTop="24dp"
+        android:textAlignment="center"
+        android:textSize="14sp"/>
+
+</LinearLayout>
